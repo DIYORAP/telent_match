@@ -86,6 +86,13 @@ export default function Dashboard() {
         });
     });
   };
+
+  // .catch((e: any) => {
+  //   toast({
+  //     title: "Error",
+  //     description: e.response.data.message,
+  //     variant: "destructive",
+  //   });
   const signup = (values: z.infer<typeof SignupSchema>) => {
     startTransition(() => {
       axios
