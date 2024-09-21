@@ -36,7 +36,7 @@ function CallAlert({
   interviewInviteLink,
   copyToClipboard,
 }: CallAlertProps) {
-  useEffect(() => {}, [isAudioOn, isVideoOn, remoteSocketId]);
+  useEffect(() => { }, [isAudioOn, isVideoOn, remoteSocketId]);
 
   const [callStarted, setCallStarted] = useState<boolean>(false);
 
@@ -52,6 +52,9 @@ function CallAlert({
     socket.emit("syncing the audio", { roomId: roomId });
   };
 
+
+  //   socket.emit("update audio", { roomId, audio: val });
+  //  socket.emit("syncing the audio", { roomId: roomId });
   const handleVideoToggle = () => {
     let val = !isVideoOn;
     setIsVideoOn(val);
