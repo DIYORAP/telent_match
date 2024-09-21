@@ -8,7 +8,8 @@ interface CodeAreaProps {
   fontSize: number;
   setCode: (code: string) => void;
 }
-
+// socket.emit("update audio", { roomId, audio: val });
+// socket.emit("syncing the audio", { roomId: roomId });
 const CodeArea = ({ theme, fontSize, lang, code, setCode }: CodeAreaProps) => {
   const handleEditorChange = (value: string | undefined, event: any): void => {
     if (typeof value === "string") setCode(value);
